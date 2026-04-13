@@ -1,0 +1,17 @@
+# .air.toml — Hot-reload config for github.com/air-verse/air
+root = "."
+tmp_dir = "tmp"
+
+[build]
+cmd = "go build -o ./tmp/main ./cmd/server"
+bin = "./tmp/main"
+delay = 1000
+exclude_dir = ["assets","tmp","vendor","testdata","web"]
+include_ext = ["go","tpl","tmpl","html"]
+kill_delay = "0.5s"
+
+[log]
+time = true
+
+[misc]
+clean_on_exit = true
